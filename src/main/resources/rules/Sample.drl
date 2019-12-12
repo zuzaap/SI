@@ -1,0 +1,981 @@
+package com.sample
+
+import com.sample.GUI;
+import com.sample.DroolsTest;
+import com.sample.Question;
+
+rule "init"
+	when
+	then
+		Question q=new Question();
+		q.content="Are you a rock or rap type of person?";
+		String[] possible = new String[2];
+		possible[0]="I like rock music start here!";
+		possible[1]="I like rap music start here!";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.answer);
+		insert(q);
+end
+		
+
+rule "rule0"
+	when x : Question(x.content=="Venetian Snares - Rossz Csillag Alatt Szuletett" && x.answer=="Calm down those drums. I like the orchestral samples though.")
+	then
+		Question q=new Question();
+		q.content="Kashiwa Daisuke - Program Music";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule1"
+	when x : Question(x.content=="Machinedrum - Room(s)" && x.answer=="Those drums. 10 times louder. 10 times crazier")
+	then
+		Question q=new Question();
+		q.content="Venetian Snares - Rossz Csillag Alatt Szuletett";
+		String[] possible = new String[1];
+		possible[0] = "Calm down those drums. I like the orchestral samples though.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule2"
+	when x : Question(x.content=="Goldie - Timeless" && x.answer=="This,but I want to feel like Im exploring a frozen wastel&&.")
+	then
+		Question q=new Question();
+		q.content="Sasha & John Digweed - Northern Exposure";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule3"
+	when x : Question(x.content=="Shpongle - Are You Shpongled?" && x.answer=="I like this careless, fun music I can kind of dance to. Give me a big essential, diverse collection of it")
+	then
+		Question q=new Question();
+		q.content = "Sasha & John Digweed - Northern Exposure";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule4"
+	when x : Question(x.content=="Shpongle - Are You Shpongled?" && x.answer=="Focus on a fast, hard hitting drums")
+	then
+		Question q=new Question();
+		q.content = "Goldie - Timeless";
+		String[] possible = new String[1];
+		possible[0] = "This,but I want to feel like Im exploring a frozen wastel&&.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule5"
+	when x : Question(x.content=="Daft Punk - Discovery" && x.answer=="Dirtier!!!")
+	then
+		Question q=new Question();
+		q.content = "Justice - Cross";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule6"
+	when x : Question(x.content=="Daft Punk - Discovery" && x.answer=="I like this careless, fun music I can kind of dance to. Give me a big, essential, diverse collection of it")
+	then
+		Question q=new Question();
+		q.content = "Sasha & John Digweed - Northern Exposure";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule7"
+	when x : Question(x.content=="Daft Punk - Discovery" && x.answer=="Fun stuff, but could it get a little more... Tribal?")
+	then
+		Question q=new Question();
+		q.content = "Shpongle - Are You Shpongled?";
+		String[] possible = new String[2];
+		possible[0] = "I like this careless, fun music I can kind of dance to. Give me a big essential, diverse collection of it";
+		possible[1] = "Focus on a fast, hard hitting drums";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule8"
+	when x : Question(x.content=="Jon Hopkins - Immunity" && x.answer=="I liked the heavier bits, Collider for example.")
+	then
+		Question q=new Question();
+		q.content = "Daft Punk - Discovery";
+		String[] possible = new String[3];
+		possible[0] = "Dirtier!!!";
+		possible[1] = "I like this careless, fun music I can kind of dance to. Give me a big, essential, diverse collection of it";
+		possible[2] = "Fun stuff, but could it get a little more... Tribal?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule9"
+	when x : Question(x.content=="Jon Hopkins - Immunity" && x.answer=="I liked the piano, but not the heavy parts")
+	then
+		Question q=new Question();
+		q.content = "Helios - Eingya";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule10"
+	when x : Question(x.content=="Brian Eno - Ambient 2: The Plateaux of Mirror" && x.answer=="This album is too busy for me.")
+	then
+		Question q=new Question();
+		q.content = "Jon Hopkins - Immunity";
+		String[] possible = new String[2];
+		possible[0] = "I liked the heavier bits, Collider for example.";
+		possible[1] = "I liked the piano, but not the heavy parts";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule11"
+	when x : Question(x.content=="Global Communication - 76:14" && x.answer=="Even more ambient")
+	then
+		Question q=new Question();
+		q.content = "Brian Eno - Ambient 2: The Plateaux of Mirror";
+		String[] possible = new String[2];
+		possible[0] = "This album is too busy for me.";
+		possible[1] = "Another, please!";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule12"
+	when x : Question(x.content=="Tangerine Dream - Phaedra" && x.answer=="More ambient stuff")
+	then
+		Question q=new Question();
+		q.content = "Global Communication - 76:14";
+		String[] possible = new String[1];
+		possible[0] = "Even more ambient";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule13"
+	when x : Question(x.content=="Tangerine Dream - Phaedra" && x.answer=="This style of synths, but shorter songs && carelessly happy.")
+	then
+		Question q=new Question();
+		q.content = "Mort Garrison - Plantasia";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule14"
+	when x : Question(x.content=="Manuel Gottsching - e2 - e4" && x.answer=="Fully electronic now.")
+	then
+		Question q=new Question();
+		q.content = "Tangerine Dream - Phaedra";
+		String[] possible = new String[2];
+		possible[0] = "More ambient stuff";
+		possible[1] = "This style of synths, but shorter songs && carelessly happy.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule15"
+	when x : Question(x.content=="Neu! Neu!" && x.answer=="More electronic influence")
+	then
+		Question q=new Question();
+		q.content = "Manuel Gottsching - e2 - e4";
+		String[] possible = new String[1];
+		possible[0] = "Fully electronic now.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule16"
+	when x : Question(x.content=="Neu! Neu!" && x.answer=="This, but electronic")
+	then
+		Question q=new Question();
+		q.content = "Tangerine Dream - Phaedra";
+		//GUI.showAlbums(q.content);
+		String[] possible = new String[2];
+		possible[0] = "More ambient stuff";
+		possible[1] = "This style of synths, but shorter songs && carelessly happy.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		insert(q);
+end
+
+rule "rule17"
+	when x : Question(x.content=="Fuck Buttons - Tarot Sport" && x.answer=="More, quieter though.")
+	then
+		Question q=new Question();
+		q.content = "Tangerine Dream - Phaedra";
+		String[] possible = new String[2];
+		possible[0] = "More ambient stuff";
+		possible[1] = "This style of synths, but shorter songs && carelessly happy.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule18"
+	when x : Question(x.content=="The Future Sound of London - Accelerator" && x.answer=="More!")
+	then
+		Question q=new Question();
+		q.content = "Global Communication - 76:14";
+		String[] possible = new String[1];
+		possible[0] = "Even more ambient";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule19"
+	when x : Question(x.content=="The Future Sound of London - Accelerator" && x.answer=="More!")
+	then
+		Question q=new Question();
+		q.content = "Goldie - Timeless";
+		String[] possible = new String[1];
+		possible[0] = "This,but I want to feel like Im exploring a frozen wastel&&.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule20"
+	when x : Question(x.content=="The Future Sound of London - Accelerator" && x.answer=="Focus on a fast, hard hitting drums")
+	then
+		Question q=new Question();
+		q.content = "Shpongle - Are You Shpongled?";
+		String[] possible = new String[2];
+		possible[0] = "I like this careless, fun music I can kind of dance to. Give me a big essential, diverse collection of it";
+		possible[1] = "Focus on a fast, hard hitting drums";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule21"
+	when x : Question(x.content=="Orb - The Orb s Adventure Beyond the Ultraworld" && x.answer=="Something a little bit less ambient maybe")
+	then
+		Question q=new Question();
+		q.content = "The Future Sound of London - Accelerator";
+		String[] possible = new String[3];
+		possible[0] = "More!";
+		possible[1] = "Focus on a fast, hard hitting drums";
+		possible[2] = "I want to feel like I m on drugs.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule22"
+	when x : Question(x.content=="Lone - Galaxy Garden" && x.answer=="Rainforest music, but slightly less crazy")
+	then
+		Question q=new Question();
+		q.content = "The Future Sound of London - Accelerator";
+		String[] possible = new String[3];
+		possible[0] = "More!";
+		possible[1] = "Focus on a fast, hard hitting drums";
+		possible[2] = "I want to feel like I m on drugs.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule23"
+	when x : Question(x.content=="Lone - Galaxy Garden" && x.answer=="I loved the strange vocals that a few of the tracks had. && the drums")
+	then
+		Question q=new Question();
+		q.content = "Machinedrum - Room(s)";
+		String[] possible = new String[1];
+		possible[0] = "Those drums. 10 times louder. 10 times crazier";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule24"
+	when x : Question(x.content=="Flying Lotus - Cosmogramma" && x.answer=="I want this, but in a jungle")
+	then
+		Question q=new Question();
+		q.content = "Lone - Galaxy Garden";
+		String[] possible = new String[2];
+		possible[0] = "Rainforest music, but slightly less crazy";
+		possible[1] = "I loved the strange vocals that a few of the tracks had. && the drums";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule25"
+	when x : Question(x.content=="Nicolas Jarr - Space is Only Noise" && x.answer=="This is much too busy && melodious for my tastes.")
+	then
+		Question q=new Question();
+		q.content = "Villalobos - Alcachofa";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule26"
+	when x : Question(x.content=="Nicolas Jarr - Space is Only Noise" && x.answer=="More of a vocal focus.")
+	then
+		Question q=new Question();
+		q.content = "James Blake - James Blake";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule27"
+	when x : Question(x.content=="Orbital - Brown Album" && x.answer=="I don t ever want to stop dancing.")
+	then
+		Question q=new Question();
+		q.content = "Daft Punk - Discovery";
+		String[] possible = new String[3];
+		possible[0] = "Dirtier!!!";
+		possible[1] = "I like this careless, fun music I can kind of dance to. Give me a big, essential, diverse collection of it";
+		possible[2] = "Fun stuff, but could it get a little more... Tribal?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule28"
+	when x : Question(x.content=="Orbital - Brown Album" && x.answer=="Less melody, more subtle.")
+	then
+		Question q=new Question();
+		q.content = "Villalobos - Alcachofa";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule29"
+	when x : Question(x.content=="Orbital - Brown Album" && x.answer=="Another, please!")
+	then
+		Question q=new Question();
+		q.content = "Jon Hopkins - Immunity";
+		String[] possible = new String[2];
+		possible[0] = "I liked the heavier bits, Collider for example.";
+		possible[1] = "I liked the piano, but not the heavy parts";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule30"
+	when x : Question(x.content=="Orbital - Brown Album" && x.answer=="I liked Halcyon + On + ON")
+	then
+		Question q=new Question();
+		q.content = "Global Communication - 76:14";
+		String[] possible = new String[1];
+		possible[0] = "Even more ambient";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule31"
+	when x : Question(x.content=="Massive Attack - Mezzanine" && x.answer=="I liked the feel of Burial a little better")
+	then
+		Question q=new Question();
+		q.content = "James Blake - James Blake";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule32"
+	when x : Question(x.content=="Burial - Untrue" && x.answer=="Drop the samples, keep the nice beats ans dark atmosphere.")
+	then
+		Question q=new Question();
+		q.content = "Massive Attack - Mezzanine";
+		String[] possible = new String[1];
+		possible[0] = "I liked the feel of Burial a little better";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule33"
+	when x : Question(x.content=="Aphex Twin - Selected Ambient Works" && x.answer=="That sounds dated. Something more recent?")
+	then
+		Question q=new Question();
+		q.content = "Flying Lotus - Cosmogramma";
+		String[] possible = new String[1];
+		possible[0] = "I want this, but in a jungle";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule34"
+	when x : Question(x.content=="Boards of Canada - Music Has the Right to Children" && x.answer=="I want something more electric feeling")
+	then
+		Question q=new Question();
+		q.content = "Aphex Twin - Selected Ambient Works";
+		String[] possible = new String[1];
+		possible[0] = "That sounds dated. Something more recent?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule35"
+	when x : Question(x.content=="Tycho - Dive" && x.answer=="Make it stranger. I want to listen to an educational film from the eighties.")
+	then
+		Question q=new Question();
+		q.content = "Boards of Canada - Music Has the Right to Children";
+		String[] possible = new String[1];
+		possible[0] = "I want something more electric feeling";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule36"
+	when x : Question(x.content=="Bonobo - Black S&&s" && x.answer=="Chill it out")
+	then
+		Question q=new Question();
+		q.content = "Tycho - Dive";
+		String[] possible = new String[1];
+		possible[0] = "Make it stranger. I want to listen to an educational film from the eighties.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule37"
+	when x : Question(x.content=="Darkside - Psycho" && x.answer=="I like this. We can lose the guitars && stuff now. I m ready")
+	then
+		Question q=new Question();
+		q.content = "James Blake - James Blake";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule38"
+	when x : Question(x.content=="Darkside - Psycho" && x.answer=="More of the same, but I think I m ready for electronic music now.")
+	then
+		Question q=new Question();
+		q.content = "Nicolas Jarr - Space is Only Noise";
+		String[] possible = new String[2];
+		possible[0] = "This is much too busy && melodious for my tastes.";
+		possible[1] = "More of a vocal focus.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule39"
+	when x : Question(x.content=="Darkside - Psycho" && x.answer=="Where can I go from here?")
+	then
+		Question q=new Question();
+		q.content = "Bonobo - Black S&&s";
+		String[] possible = new String[1];
+		possible[0] = "Chill it out";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule40"
+	when x : Question(x.content=="Tokimonsta - Midnight Menu" && x.answer=="Even stranger! Even wonkier!")
+	then
+		Question q=new Question();
+		q.content = "Flying Lotus - Cosmogramma";
+		String[] possible = new String[1];
+		possible[0] = "I want this, but in a jungle";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule41"
+	when x : Question(x.content=="Tokimonsta - Midnight Menu" && x.answer=="Keep the beats, but make it dark && operatic.")
+	then
+		Question q=new Question();
+		q.content = "Burial - Untrue";
+		String[] possible = new String[1];
+		possible[0] = "Drop the samples, keep the nice beats ans dark atmosphere.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule42"
+	when x : Question(x.content=="Tokimonsta - Midnight Menu" && x.answer=="I can deal with the weird parts. I think I m ready for the classics.")
+	then
+		Question q=new Question();
+		q.content = "Aphex Twin - Selected Ambient Works";
+		String[] possible = new String[1];
+		possible[0] = "That sounds dated. Something more recent?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule43"
+	when x : Question(x.content=="Tokimonsta - Midnight Menu" && x.answer=="I like those beats. What if they were a bit more spaced out?")
+	then
+		Question q=new Question();
+		q.content = "Boards of Canada - Music Has the Right to Children";
+		String[] possible = new String[1];
+		possible[0] = "I want something more electric feeling";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule44"
+	when x : Question(x.content=="Nujabes - Metaphorical Music" && x.answer=="Stranger! Wonkier!")
+	then
+		Question q=new Question();
+		q.content = "Tokimonsta - Midnight Menu";
+		String[] possible = new String[4];
+		possible[0] = "Even stranger! Even wonkier!";
+		possible[1] = "Keep the beats, but make it dark && operatic.";
+		possible[2] = "I can deal with the weird parts. I think I m ready for the classics.";
+		possible[3] = "I like those beats. What if they were a bit more spaced out?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule45"
+	when x : Question(x.content=="Nujabes - Metaphorical Music" && x.answer=="I need more of these lush, organic sounds")
+	then
+		Question q=new Question();
+		q.content = "Bonobo - Black S&&s";
+		String[] possible = new String[1];
+		possible[0] = "Chill it out";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule46"
+	when x : Question(x.content=="The Knife - Silent Sound" && x.answer=="Too weird!")
+	then
+		Question q=new Question();
+		q.content = "Darkside - Psycho";
+		String[] possible = new String[3];
+		possible[0] = "I like this. We can lose the guitars && stuff now. I m ready";
+		possible[1] = "More of the same, but I think I m ready for electronic music now.";
+		possible[2] = "Where can I go from here?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule47"
+	when x : Question(x.content=="The Knife - Silent Sound" && x.answer=="Take out the vocals. Focus it.")
+	then
+		Question q=new Question();
+		q.content = "Tokimonsta - Midnight Menu";
+		String[] possible = new String[4];
+		possible[0] = "Even stranger! Even wonkier!";
+		possible[1] = "Keep the beats, but make it dark && operatic.";
+		possible[2] = "I can deal with the weird parts. I think I m ready for the classics.";
+		possible[3] = "I like those beats. What if they were a bit more spaced out?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule48"
+	when x : Question(x.content=="" && x.answer=="I m liking these instrumental beats. More please")
+	then
+		Question q=new Question();
+		q.content = "Nujabes - Metaphorical Music";
+		String[] possible = new String[2];
+		possible[0] = "Stranger! Wonkier!";
+		possible[1] = "I need more of these lush, organic sounds";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule49"
+	when x : Question(x.content=="The Avalanches - Since I Left You" && x.answer=="More sampling, with a hip-hop vibe to it")
+	then
+		Question q=new Question();
+		q.content = "";
+		String[] possible = new String[1];
+		possible[0] = "I m liking these instrumental beats. More please";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule50"
+	when x : Question(x.content=="The Avalanches - Since I Left You" && x.answer=="Darker. Sadder. The samples coul be messed with a little more.")
+	then
+		Question q=new Question();
+		q.content = "Burial - Untrue";
+		String[] possible = new String[1];
+		possible[0] = "Drop the samples, keep the nice beats ans dark atmosphere.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule51"
+	when x : Question(x.content=="Girl Talk - Feed the Animals" && x.answer=="Whoa, sampling is cool, more like this!")
+	then
+		Question q=new Question();
+		q.content = "The Avalanches - Since I Left You";
+		String[] possible = new String[2];
+		possible[0] = "More sampling, with a hip-hop vibe to it";
+		possible[1] = "Darker. Sadder. The samples coul be messed with a little more.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule52"
+	when x : Question(x.content=="Kanye West - 808s & Heartbreak" && x.answer=="Come on, I want R-E-A-L rap music.")
+	then
+		Question q=new Question();
+		q.content = "Girl Talk - Feed the Animals";
+		String[] possible = new String[1];
+		possible[0] = "Whoa, sampling is cool, more like this!";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule53"
+	when x : Question(x.content=="Kanye West - 808s & Heartbreak" && x.answer=="Give me some nice hip-hop beats")
+	then
+		Question q=new Question();
+		q.content = "Nujabes - Metaphorical Music";
+		String[] possible = new String[2];
+		possible[0] = "Stranger! Wonkier!";
+		possible[1] = "I need more of these lush, organic sounds";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule54"
+	when x : Question(x.content=="Klaus Schulze - Timewind" && x.answer=="Let s get a steady beat on that")
+	then
+		Question q=new Question();
+		q.content = "Orb - The Orb s Adventure Beyond the Ultraworld";
+		String[] possible = new String[1];
+		possible[0] = "Something a little bit less ambient maybe";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule55"
+	when x : Question(x.content=="Klaus Schulze - Timewind" && x.answer=="More drums!")
+	then
+		Question q=new Question();
+		q.content = "Autechre - Amber";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule56"
+	when x : Question(x.content=="Aphex Twin - Drukqs" && x.answer=="That sounds dated. Something more recent?")
+	then
+		Question q=new Question();
+		q.content = "Flying Lotus - Cosmogramma";
+		String[] possible = new String[1];
+		possible[0] = "I want this, but in a jungle";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule57"
+	when x : Question(x.content=="Aphex Twin - Drukqs" && x.answer=="These complex beats are awesome. Can they get wilder?")
+	then
+		Question q=new Question();
+		q.content = "Machinedrum - Room(s)";
+		String[] possible = new String[1];
+		possible[0] = "Those drums. 10 times louder. 10 times crazier";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule58"
+	when x : Question(x.content=="Aphex Twin - Drukqs" && x.answer=="Let s get a steady beat on that.")
+	then
+		Question q=new Question();
+		q.content = "Orb - The Orb s Adventure Beyond the Ultraworld";
+		String[] possible = new String[1];
+		possible[0] = "Something a little bit less ambient maybe";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule59"
+	when x : Question(x.content=="Aphex Twin - Drukqs" && x.answer=="I can t wrap my head around these drums, but I like the rest of it. No D-R-U-M-S")
+	then
+		Question q=new Question();
+		q.content = "Klaus Schulze - Timewind";
+		String[] possible = new String[2];
+		possible[0] = "Let s get a steady beat on that";
+		possible[1] = "More drums!";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule60"
+	when x : Question(x.content=="Aphex Twin - Drukqs" && x.answer=="Cool, I guess electronic music isn t just talentless button pushing. More like this!")
+	then
+		Question q=new Question();
+		q.content = "Autechre - Amber";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule61"
+	when x : Question(x.content=="Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas to Heaven" && x.answer=="I love those buildups! I could try some electronic music that does that.")
+	then
+		Question q=new Question();
+		q.content = "Fuck Buttons - Tarot Sport";
+		String[] possible = new String[1];
+		possible[0] = "More, quieter though.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule62"
+	when x : Question(x.content=="Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas to Heaven" && x.answer=="I think I could h&&le that, but way more minimal")
+	then
+		Question q=new Question();
+		q.content = "Neu! Neu!";
+		String[] possible = new String[2];
+		possible[0] = "More electronic influence";
+		possible[1] = "This, but electronic";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule63"
+	when x : Question(x.content=="Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas to Heaven" && x.answer=="I like the post-rock song structure && scale")
+	then
+		Question q=new Question();
+		q.content = "Kashiwa Daisuke - Program Music";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule64"
+	when x : Question(x.content=="Radiohead - Kid A" && x.answer=="Even this is too much electronic for me")
+	then
+		Question q=new Question();
+		q.content = "Godspeed You! Black Emperor - Lift Your Skinny Fists Like Antennas to Heaven";
+		String[] possible = new String[3];
+		possible[0] = "I love those buildups! I could try some electronic music that does that.";
+		possible[1] = "I think I could h&&le that, but way more minimal";
+		possible[2] = "I like the post-rock song structure && scale";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule65"
+	when x : Question(x.content=="Radiohead - Kid A" && x.answer=="I actually liked the drums && bleeps they had goind on.")
+	then
+		Question q=new Question();
+		q.content = "Autechre - Amber";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule66"
+	when x : Question(x.content=="Radiohead - Kid A" && x.answer=="More of that!")
+	then
+		Question q=new Question();
+		q.content = "Aphex Twin - Selected Ambient Works";
+		String[] possible = new String[1];
+		possible[0] = "That sounds dated. Something more recent?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule67"
+	when x : Question(x.content=="Radiohead - Kid A" && x.answer=="Weird, but good! Maybe more electronic, but I still want vocals")
+	then
+		Question q=new Question();
+		q.content = "The Knife - Silent Sound";
+		String[] possible = new String[2];
+		possible[0] = "Too weird!";
+		possible[1] = "Take out the vocals. Focus it.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule68"
+	when x : Question(x.content=="Radiohead - Kid A" && x.answer=="Cool, but I m not quite ready to lose the guitars quite yet.")
+	then
+		Question q=new Question();
+		q.content = "Darkside - Psycho";
+		String[] possible = new String[3];
+		possible[0] = "I like this. We can lose the guitars && stuff now. I m ready";
+		possible[1] = "More of the same, but I think I m ready for electronic music now.";
+		possible[2] = "Where can I go from here?";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule69"
+	when x : Question(x.content=="Radiohead - OK Computer" && x.answer=="Cool, but that s basically just rock music!")
+	then
+		Question q=new Question();
+		q.content = "Radiohead - Kid A";
+		String[] possible = new String[5];
+		possible[0] = "Even this is too much electronic for me";
+		possible[1] = "I actually liked the drums && bleeps they had goind on.";
+		possible[2] = "More of that!";
+		possible[3] = "Weird, but good! Maybe more electronic, but I still want vocals";
+		possible[4] = "Cool, but I m not quite ready to lose the guitars quite yet.";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule70"
+	when x : Question(x.content=="Are you a rock or rap type of person?" && x.answer=="I like rock music start here!")
+	then
+		Question q=new Question();
+		q.content = "Radiohead - OK Computer";
+		String[] possible = new String[1];
+		possible[0] = "Cool, but that s basically just rock music!";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule71"
+	when x : Question(x.content=="Are you a rock or rap type of person?" && x.answer=="I like rap music start here!")
+	then
+		Question q=new Question();
+		q.content = "Kanye West - 808s & Heartbreak";
+		String[] possible = new String[2];
+		possible[0] = "Come on, I want R-E-A-L rap music.";
+		possible[1] = "Give me some nice hip-hop beats";
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
+		//GUI.showAlbums(q.content);
+		insert(q);
+end;
