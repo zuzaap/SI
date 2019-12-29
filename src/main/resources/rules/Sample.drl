@@ -14,10 +14,9 @@ rule "init"
 		possible[1]="I like rap music start here!";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.answer);
 		insert(q);
 end
-		
+
 
 rule "rule0"
 	when x : Question(x.content=="Venetian Snares - Rossz Csillag Alatt Szuletett" && x.answer=="Calm down those drums. I like the orchestral samples though.")
@@ -27,7 +26,6 @@ rule "rule0"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -40,7 +38,6 @@ rule "rule1"
 		possible[0] = "Calm down those drums. I like the orchestral samples though.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -52,7 +49,6 @@ rule "rule2"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -64,7 +60,6 @@ rule "rule3"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -77,7 +72,6 @@ rule "rule4"
 		possible[0] = "This,but I want to feel like Im exploring a frozen wastel&&.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -89,7 +83,6 @@ rule "rule5"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -101,7 +94,6 @@ rule "rule6"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -115,7 +107,6 @@ rule "rule7"
 		possible[1] = "Focus on a fast, hard hitting drums";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -130,7 +121,6 @@ rule "rule8"
 		possible[2] = "Fun stuff, but could it get a little more... Tribal?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -142,12 +132,11 @@ rule "rule9"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
 rule "rule10"
-	when x : Question(x.content=="Brian Eno - Ambient 2: The Plateaux of Mirror" && x.answer=="This album is too busy for me.")
+	when x : Question(x.content=="Brian Eno - Ambient 2: The Plateaux of Mirror" && x.answer=="Another, please!")
 	then
 		Question q=new Question();
 		q.content = "Jon Hopkins - Immunity";
@@ -156,7 +145,6 @@ rule "rule10"
 		possible[1] = "I liked the piano, but not the heavy parts";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -170,7 +158,6 @@ rule "rule11"
 		possible[1] = "Another, please!";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -183,7 +170,6 @@ rule "rule12"
 		possible[0] = "Even more ambient";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -195,7 +181,6 @@ rule "rule13"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -209,7 +194,6 @@ rule "rule14"
 		possible[1] = "This style of synths, but shorter songs && carelessly happy.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -222,7 +206,6 @@ rule "rule15"
 		possible[0] = "Fully electronic now.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -250,7 +233,6 @@ rule "rule17"
 		possible[1] = "This style of synths, but shorter songs && carelessly happy.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -263,7 +245,6 @@ rule "rule18"
 		possible[0] = "Even more ambient";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -276,7 +257,6 @@ rule "rule19"
 		possible[0] = "This,but I want to feel like Im exploring a frozen wastel&&.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -290,7 +270,6 @@ rule "rule20"
 		possible[1] = "Focus on a fast, hard hitting drums";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -305,7 +284,6 @@ rule "rule21"
 		possible[2] = "I want to feel like I m on drugs.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -320,7 +298,6 @@ rule "rule22"
 		possible[2] = "I want to feel like I m on drugs.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -333,7 +310,6 @@ rule "rule23"
 		possible[0] = "Those drums. 10 times louder. 10 times crazier";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -347,7 +323,6 @@ rule "rule24"
 		possible[1] = "I loved the strange vocals that a few of the tracks had. && the drums";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -359,7 +334,6 @@ rule "rule25"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -371,7 +345,6 @@ rule "rule26"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -386,7 +359,6 @@ rule "rule27"
 		possible[2] = "Fun stuff, but could it get a little more... Tribal?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -398,7 +370,6 @@ rule "rule28"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -412,7 +383,6 @@ rule "rule29"
 		possible[1] = "I liked the piano, but not the heavy parts";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -425,7 +395,6 @@ rule "rule30"
 		possible[0] = "Even more ambient";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -437,7 +406,6 @@ rule "rule31"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -450,7 +418,6 @@ rule "rule32"
 		possible[0] = "I liked the feel of Burial a little better";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -463,7 +430,6 @@ rule "rule33"
 		possible[0] = "I want this, but in a jungle";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -476,7 +442,6 @@ rule "rule34"
 		possible[0] = "That sounds dated. Something more recent?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -489,7 +454,6 @@ rule "rule35"
 		possible[0] = "I want something more electric feeling";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -502,7 +466,6 @@ rule "rule36"
 		possible[0] = "Make it stranger. I want to listen to an educational film from the eighties.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -514,7 +477,6 @@ rule "rule37"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -528,7 +490,6 @@ rule "rule38"
 		possible[1] = "More of a vocal focus.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -541,7 +502,6 @@ rule "rule39"
 		possible[0] = "Chill it out";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -554,7 +514,6 @@ rule "rule40"
 		possible[0] = "I want this, but in a jungle";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -567,7 +526,6 @@ rule "rule41"
 		possible[0] = "Drop the samples, keep the nice beats ans dark atmosphere.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -580,7 +538,6 @@ rule "rule42"
 		possible[0] = "That sounds dated. Something more recent?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -593,7 +550,6 @@ rule "rule43"
 		possible[0] = "I want something more electric feeling";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -609,7 +565,6 @@ rule "rule44"
 		possible[3] = "I like those beats. What if they were a bit more spaced out?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -622,7 +577,6 @@ rule "rule45"
 		possible[0] = "Chill it out";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -637,7 +591,6 @@ rule "rule46"
 		possible[2] = "Where can I go from here?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -653,7 +606,6 @@ rule "rule47"
 		possible[3] = "I like those beats. What if they were a bit more spaced out?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -667,7 +619,6 @@ rule "rule48"
 		possible[1] = "I need more of these lush, organic sounds";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -680,7 +631,6 @@ rule "rule49"
 		possible[0] = "I m liking these instrumental beats. More please";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -693,7 +643,6 @@ rule "rule50"
 		possible[0] = "Drop the samples, keep the nice beats ans dark atmosphere.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -707,7 +656,6 @@ rule "rule51"
 		possible[1] = "Darker. Sadder. The samples coul be messed with a little more.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -720,7 +668,6 @@ rule "rule52"
 		possible[0] = "Whoa, sampling is cool, more like this!";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -734,7 +681,6 @@ rule "rule53"
 		possible[1] = "I need more of these lush, organic sounds";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -747,7 +693,6 @@ rule "rule54"
 		possible[0] = "Something a little bit less ambient maybe";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -759,7 +704,6 @@ rule "rule55"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -772,7 +716,6 @@ rule "rule56"
 		possible[0] = "I want this, but in a jungle";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -785,7 +728,6 @@ rule "rule57"
 		possible[0] = "Those drums. 10 times louder. 10 times crazier";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -798,7 +740,6 @@ rule "rule58"
 		possible[0] = "Something a little bit less ambient maybe";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -812,7 +753,6 @@ rule "rule59"
 		possible[1] = "More drums!";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -824,7 +764,6 @@ rule "rule60"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -837,7 +776,6 @@ rule "rule61"
 		possible[0] = "More, quieter though.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -851,7 +789,6 @@ rule "rule62"
 		possible[1] = "This, but electronic";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -863,7 +800,6 @@ rule "rule63"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -878,7 +814,6 @@ rule "rule64"
 		possible[2] = "I like the post-rock song structure && scale";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -890,7 +825,6 @@ rule "rule65"
 		String[] possible = null;
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -903,7 +837,6 @@ rule "rule66"
 		possible[0] = "That sounds dated. Something more recent?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -917,7 +850,6 @@ rule "rule67"
 		possible[1] = "Take out the vocals. Focus it.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -932,7 +864,6 @@ rule "rule68"
 		possible[2] = "Where can I go from here?";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -949,7 +880,6 @@ rule "rule69"
 		possible[4] = "Cool, but I m not quite ready to lose the guitars quite yet.";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -962,7 +892,6 @@ rule "rule70"
 		possible[0] = "Cool, but that s basically just rock music!";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
 		insert(q);
 end
 
@@ -976,6 +905,16 @@ rule "rule71"
 		possible[1] = "Give me some nice hip-hop beats";
 		String selectedValue=GUI.questionWindow(possible,q.content);
 		q.answer = selectedValue;
-		//GUI.showAlbums(q.content);
+		insert(q);
+end
+
+rule "rule72"
+	when x : Question(x.content=="Brian Eno - Ambient 2: The Plateaux of Mirror" && x.answer=="This album is too busy for me.")
+	then
+		Question q=new Question();
+		q.content = "Brian Eno - Ambient 1: Music for Airports";
+		String[] possible = null;
+		String selectedValue=GUI.questionWindow(possible,q.content);
+		q.answer = selectedValue;
 		insert(q);
 end;
